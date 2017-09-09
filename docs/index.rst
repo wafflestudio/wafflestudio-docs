@@ -8,7 +8,9 @@ Welcome to wafflestudio-docs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Seminars:
+
+   web-seminar-react-django
 
 
 
