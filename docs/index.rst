@@ -3,20 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to wafflestudio-docs's documentation!
+와플스튜디오 세미나 자료 사이트입니다!
 =============================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Seminars:
+   :maxdepth: 3
+   :caption: Seminars
 
-   web-seminar-react-django
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   web-seminar-react-django/index

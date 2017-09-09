@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'wafflestudio-docs'
+project = 'wafflestudio'
 copyright = '2017, Heesu Suh'
 author = 'Heesu Suh'
 
@@ -83,7 +83,9 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'default'
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -115,7 +117,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'wafflestudio-docsdoc'
+htmlhelp_basename = 'wafflestudiodoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -142,7 +144,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'wafflestudio-docs.tex', 'wafflestudio-docs Documentation',
+    (master_doc, 'wafflestudio.tex', 'wafflestudio Documentation',
      'Heesu Suh', 'manual'),
 ]
 
@@ -152,7 +154,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'wafflestudio-docs', 'wafflestudio-docs Documentation',
+    (master_doc, 'wafflestudio', 'wafflestudio Documentation',
      [author], 1)
 ]
 
@@ -163,8 +165,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'wafflestudio-docs', 'wafflestudio-docs Documentation',
-     author, 'wafflestudio-docs', 'One line description of project.',
+    (master_doc, 'wafflestudio', 'wafflestudio Documentation',
+     author, 'wafflestudio', 'One line description of project.',
      'Miscellaneous'),
 ]
 
