@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'wafflestudio-docs'
-copyright = '2017, 서희수'
-author = '서희수'
+copyright = '2017, Heesu Suh'
+author = 'Heesu Suh'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -143,7 +143,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'wafflestudio-docs.tex', 'wafflestudio-docs Documentation',
-     '서희수', 'manual'),
+     'Heesu Suh', 'manual'),
 ]
 
 
