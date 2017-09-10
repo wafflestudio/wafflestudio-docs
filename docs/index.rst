@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-와플스튜디오 세미나 자료 사이트입니다!
+와플스튜디오 세미나에 오신 것을 환영합니다!
 =============================================
 
 .. toctree::

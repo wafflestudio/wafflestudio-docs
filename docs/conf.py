@@ -113,6 +113,7 @@ html_sidebars = {
     ]
 }
 
+html_title = 'wafflestudio documents'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
