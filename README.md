@@ -7,3 +7,7 @@ https://wafflestudio.readthedocs.io
 ## 개발 환경 설정
 
 `pip install -r requirments.txt`
+
+## Restructured Text Syntax Guide
+
+https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
