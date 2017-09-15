@@ -12,6 +12,18 @@
 또한 조마다 주기적으로 스터디 모임을 가져 과제하면서 어려운 것들을 도와줄 수 있도록 할 것입니다.
 
 
+세미나 일정
+--------------------
+
+* 9.15 : Introduction
+* 9.22 : HTML & CSS
+* 9.29 : Javascript & React 입문
+* 10.13 : React
+* 11.3 : Redux & Redux-saga
+* 11.17 : Django REST
+* 12.1 : Django REST 심화 및 웹앱 개발
+
+
 웹앱(web app)이란?
 -----------------------
 
