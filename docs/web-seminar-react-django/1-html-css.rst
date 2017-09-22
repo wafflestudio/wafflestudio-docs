@@ -90,7 +90,7 @@ element 안에 element를 넣을 수도 있습니다.
 이 html 파일을 index.html로 저장하고 웹 브라우저에서 열면 다음과 같이 보일 것입니다. (이미지도 같은 경로 안에 있어야 합니다)
 
 .. image:: ../_static/html-result-example.png
-    :width: 80%
+    :width: 100%
     :align: center
 
 
@@ -120,7 +120,7 @@ style.css에 다음 코드를 붙여넣어 봅시다.
 이제 index.html을 브라우저에서 열면 다음과 같이 보일 것입니다.
 
 .. image:: ../_static/css-result-example.png
-    :width: 80%
+    :width: 100%
     :align: center
 
 위에서 붙여넣은 코드에서 중괄호 앞에 있는 p는 p tag들에 해당 style을 적용한다는 것을 의미합니다.(selector라고 부름) 그리고 중괄호 안에 있는 color: blue는 p tag 안에 있는 text의 색깔을 blue로 지정해준다는 것을 의미합니다. (color는 property, blue는 property value라고 부름)
@@ -138,7 +138,7 @@ style.css에 다음 코드를 붙여넣어 봅시다.
 border: 1px solid black은 1px 크기의 검은색 경계선을 만든다는 의미이고, background-color: #ccffcc는 배경 색깔을 #ccffcc(색깔 hex code)로 만든다는 의미입니다. 이것을 브라우저에서 열면 다음과 같이 보입니다.
 
 .. image:: ../_static/css-result-example-2.png
-    :width: 80%
+    :width: 100%
     :align: center
 
 selector에는 tag selector 이외에도 여러 종류가 있는데, 대표적으로는 id selector와 class selector가 있습니다. 작업하던 html의 h1 tag에 다음과 같이 class를 추가해봅시다.
@@ -147,7 +147,7 @@ selector에는 tag selector 이외에도 여러 종류가 있는데, 대표적�
 
     <h1 class="heading">세미나 일정</h1>
 
-style.css에 다음과 같은 코드를 추가해봅시다. 이 코드는 heading이라는 class를 가진 element의 color를 red로 만들어주는 것을 의미합니다. class selector는 class 이름 앞에 .을 붙이면 됩니다.(id selector는 앞에 #을 붙이면 됨)
+style.css에 다음과 같은 코드를 추가해봅시다. 이 코드는 heading이라는 class를 가진 element들의 color를 red로 만들어주는 것을 의미합니다. class selector는 class 이름 앞에 .을 붙이면 됩니다.(id selector는 앞에 #을 붙이면 됨)
 
 .. code-block:: css
 
@@ -158,7 +158,7 @@ style.css에 다음과 같은 코드를 추가해봅시다. 이 코드는 headin
 이제 브라우저에서 띄우면 다음과 같이 보일 것입니다.
 
 .. image:: ../_static/css-result-example-3.png
-    :width: 80%
+    :width: 100%
     :align: center
 
 
@@ -168,7 +168,7 @@ CSS box model에 대해 알아봅시다
 앞에서는 CSS를 이용해 글자의 색깔, border의 색깔 등을 바꾸는 방법을 알아보았습니다. 그런데 element간의 간격이나 배치 등을 바꾸기 위해서는 어떻게 해야할까요? 그래서 필요한 것이 css box model입니다.
 
 .. image:: ../_static/css-box-model.png
-    :width: 50%
+    :width: 300px
     :align: center
 
 브라우저의 rendering engine은 모든 element를 직사각형 box로 취급합니다. 가장 안쪽에는 content area(실제 content가 들어있는 영역)가 있고, 그 밖에는 padding area(여백 영역), 그 다음에는 border area(경계선), 그리고 마지막으로 margin area(다른 element와 겹치지 않는 영역)가 있습니다.
@@ -182,13 +182,13 @@ CSS box model에 대해 알아봅시다
       border: 1px solid black;
       background-color: #ccffcc;
       margin: 20px;
-      padding: 30px 5px 5px 5px;
+      padding: 30px 5px 10px 5px;
     }
 
 이제 브라우저에서 띄우면 다음과 같이 보일 것입니다.
 
 .. image:: ../_static/css-box-model-result-example.png
-    :width: 80%
+    :width: 100%
     :align: center
 
 
