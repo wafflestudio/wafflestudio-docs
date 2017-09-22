@@ -87,7 +87,124 @@ element 안에 element를 넣을 수도 있습니다.
 * <li> : bullet list의 item
 * <img> : image.
 
-이 html 파일을 웹 브라우저에서 띄우면 다음과 같이 보입니다.
+이 html 파일을 index.html로 저장하고 웹 브라우저에서 열면 다음과 같이 보일 것입니다. (이미지도 같은 경로 안에 있어야 합니다)
 
 .. image:: ../_static/html-result-example.png
+    :width: 80%
+    :align: center
+
+
+CSS가 뭔가요?
+--------------------------------------
+
+CSS는 HTML로 만든 웹페이지에 스타일을 씌워줘서 좀 더 보기 좋게 만들어주는 언어라고 생각하면 됩니다. 예를 들어, 어떤 글자의 색깔을 바꾸고 싶다던지, 폰트를 바꾸고 싶다던지, 혹은 이미지의 배치를 바꾸고 싶다던지 할 때 쓰는 언어입니다.
+
+
+CSS 쓰는 법을 알아봅시다.
+--------------------------------------
+
+CSS를 쓰려면 일단 HTML에서 link를 해줘야 합니다. styles 폴더 안에 style.css라는 파일을 만들어서 html의 head tag 안에 다음 줄을 붙여넣어 봅시다. (폴더는 경로만 잘 설정해주면 어떻게 해도 상관 없습니다)
+
+.. code-block:: html
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+style.css에 다음 코드를 붙여넣어 봅시다.
+
+.. code-block:: css
+
+    p {
+      color: blue;
+    }
+
+이제 index.html을 브라우저에서 열면 다음과 같이 보일 것입니다.
+
+.. image:: ../_static/css-result-example.png
+    :width: 80%
+    :align: center
+
+위에서 붙여넣은 코드에서 중괄호 앞에 있는 p는 p tag들에 해당 style을 적용한다는 것을 의미합니다.(selector라고 부름) 그리고 중괄호 안에 있는 color: blue는 p tag 안에 있는 text의 색깔을 blue로 지정해준다는 것을 의미합니다. (color는 property, blue는 property value라고 부름)
+
+색깔 외에도 몇 가지 성질들을 더 추가해볼 수 있습니다.
+
+.. code-block:: css
+
+    p {
+      color: blue;
+      border: 1px solid black;
+      background-color: #ccffcc;
+    }
+
+border: 1px solid black은 1px 크기의 검은색 경계선을 만든다는 의미이고, background-color: #ccffcc는 배경 색깔을 #ccffcc(색깔 hex code)로 만든다는 의미입니다. 이것을 브라우저에서 열면 다음과 같이 보입니다.
+
+.. image:: ../_static/css-result-example-2.png
+    :width: 80%
+    :align: center
+
+selector에는 tag selector 이외에도 여러 종류가 있는데, 대표적으로는 id selector와 class selector가 있습니다. 작업하던 html의 h1 tag에 다음과 같이 class를 추가해봅시다.
+
+.. code-block:: html
+
+    <h1 class="heading">세미나 일정</h1>
+
+style.css에 다음과 같은 코드를 추가해봅시다. 이 코드는 heading이라는 class를 가진 element의 color를 red로 만들어주는 것을 의미합니다. class selector는 class 이름 앞에 .을 붙이면 됩니다.(id selector는 앞에 #을 붙이면 됨)
+
+.. code-block:: css
+
+    .heading {
+      color: red;
+    }
+
+이제 브라우저에서 띄우면 다음과 같이 보일 것입니다.
+
+.. image:: ../_static/css-result-example-3.png
+    :width: 80%
+    :align: center
+
+
+CSS box model에 대해 알아봅시다
+--------------------------------------
+
+앞에서는 CSS를 이용해 글자의 색깔, border의 색깔 등을 바꾸는 방법을 알아보았습니다. 그런데 element간의 간격이나 배치 등을 바꾸기 위해서는 어떻게 해야할까요? 그래서 필요한 것이 css box model입니다.
+
+.. image:: ../_static/css-box-model.png
+    :width: 50%
+    :align: center
+
+브라우저의 rendering engine은 모든 element를 직사각형 box로 취급합니다. 가장 안쪽에는 content area(실제 content가 들어있는 영역)가 있고, 그 밖에는 padding area(여백 영역), 그 다음에는 border area(경계선), 그리고 마지막으로 margin area(다른 element와 겹치지 않는 영역)가 있습니다.
+
+실제로 style.css에 적용을 해봅시다. margin: 20px는 margin을 모두 20px로 준다는 의미이고, padding: 30px 5px 10px 5px(차례대로 top, right, down, left)은 위쪽 padding은 30px, 양옆 padding은 5px, 아래쪽 padding은 10px로 준다는 의미입니다.
+
+.. code-block:: css
+
+    p {
+      color: blue;
+      border: 1px solid black;
+      background-color: #ccffcc;
+      margin: 20px;
+      padding: 30px 5px 5px 5px;
+    }
+
+이제 브라우저에서 띄우면 다음과 같이 보일 것입니다.
+
+.. image:: ../_static/css-box-model-result-example.png
+    :width: 80%
+    :align: center
+
+
+읽을거리
+--------------------------------------
+
+* `CSS Selector Reference <https://www.w3schools.com/cssref/css_selectors.asp>`_
+* `How Flexbox works - explained with big, colorful, animated gifs <https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35>`_
+
+
+과제
+--------------------------------------
+
+HTML과 CSS만을 이용해서 구글 홈페이지 목업 만들기
+
+.. image:: ../_static/google-screenshot.png
     :width: 100%
+
+필요한 이미지는 구글 홈페이지에서 직접 다운받을 수 있습니다.
