@@ -87,7 +87,7 @@ element 안에 element를 넣을 수도 있습니다.
 * <li> : bullet list의 item
 * <img> : image.
 
-이 html 파일을 index.html로 저장하고 웹 브라우저에서 열면 다음과 같이 보일 것입니다. (이미지도 같은 경로 안에 있어야 합니다)
+이 html 파일을 index.html로 저장하고 웹 브라우저에서 열면 다음과 같이 보일 것입니다. (이미지는 아무거나 넣고 img element에서 src를 그 파일명으로 수정해주시면 됩니다)
 
 .. image:: ../_static/html-result-example.png
     :width: 100%
@@ -103,7 +103,7 @@ CSS는 HTML로 만든 웹페이지에 스타일을 씌워줘서 좀 더 보기 �
 CSS 쓰는 법을 알아봅시다.
 --------------------------------------
 
-CSS를 쓰려면 일단 HTML에서 link를 해줘야 합니다. styles 폴더 안에 style.css라는 파일을 만들어서 html의 head tag 안에 다음 줄을 붙여넣어 봅시다. (폴더는 경로만 잘 설정해주면 어떻게 해도 상관 없습니다)
+CSS를 쓰려면 일단 HTML에서 link를 해줘야 합니다. styles 폴더 안에 style.css라는 파일을 만들어서 html의 head tag 안에 다음 줄을 붙여넣어 봅시다. 참고로 href="styles/style.css"라고 한 것은 현재 경로를 기준으로 styles라는 폴더 안에 있는 style.css라는 파일을 의미합니다. 경로만 잘 설정해준다면 파일을 어디에 넣던지, 어떤 이름으로 만들어주던지 상관 없습니다.
 
 .. code-block:: html
 
@@ -192,11 +192,104 @@ CSS box model에 대해 알아봅시다
     :align: center
 
 
+Flexbox (보충)
+--------------------------------------
+
+div element 여러 개를 앞쪽에 배치하고 싶다던지, 뒤쪽에 배치하고 싶다던지, 혹은 중간에 배치하고 싶을 때는 어떻게 할까요? 그래서 나온 것이 flexbox입니다.
+
+그럼 flexbox를 이용한 간단한 예시를 살펴보겠습니다.
+
+.. code-block:: html
+
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+      <!-- class="container container-1"은 container, container-1 class를 동시에 가지고 있는 것을 의미합니다.
+      중간에 공백으로 구분해주면 이렇게 여러 개의 class를 넣을 수도 있습니다. -->
+      <div class="container container-1">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+      <div class="container container-2">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+      <div class="container container-3">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+      <div class="container container-4">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+      <div class="container container-5">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </body>
+  </html>
+
+.. code-block:: css
+
+  .item {
+    width: 100px;
+    border: 1px solid black;
+  }
+
+  .container {
+    margin: 20px 0px;
+    border: 1px solid red;
+    display: flex; /* 이렇게 display를 flex로 설정해주면 해당 element는 flex container가 됩니다. */
+  }
+
+  .container-1 {
+    justify-content: flex-end; /* 뒤에부터 차곡차곡 쌓기 */
+  }
+
+  .container-2 {
+    justify-content: flex-start; /* 처음부터 차곡차곡 쌓기 */
+  }
+
+  .container-3 {
+    justify-content: center; /* 중간에 배치 */
+  }
+
+  .container-4 {
+    justify-content: space-between; /* item 사이의 간격을 일정하게 */
+  }
+
+  .container-5 {
+    justify-content: space-around; /* item 사이와 양 끝의 간격을 일정하게 */
+  }
+
+위의 html과 css를 각각 저장하고 브라우저에서 열어보면 다음과 같이 보일 것입니다.
+
+.. image:: ../_static/flexbox-example.png
+    :width: 100%
+    :align: center
+
+이렇게 display: flex로 flex container를 만들어주고 justify-content를 적절히 설정해주면 원하는 레이아웃대로 배치할 수 있습니다. 한 번씩 시도해보시기 바랍니다.  flexbox를 더 자세히 알아보고 싶다면 아래 읽을거리에 첨부한 사이트들을 참고해주세요.
+
+(IE 브라우저에서는 flexbox가 잘 작동하지 않을 수도 있습니다. 대응하는 방법도 있긴 하지만 많이 귀찮으니 Chrome이나 Edge 등 다른 브라우저를 사용하길 권장합니다)
+
+
 읽을거리
 --------------------------------------
 
+* `생활코딩 HTML 사전 <https://opentutorials.org/course/1058>`_
+* `생활코딩 CSS 사전 <https://opentutorials.org/course/718>`_
 * `CSS Selector Reference <https://www.w3schools.com/cssref/css_selectors.asp>`_
 * `How Flexbox works - explained with big, colorful, animated gifs <https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35>`_
+* `FLEXBOX FROGGY (flexbox를 게임으로 배워봅시다) <http://flexboxfroggy.com>`_
+* `CSS Layout - The position Property <https://www.w3schools.com/css/css_positioning.asp>`_
 
 
 과제
@@ -208,3 +301,5 @@ HTML과 CSS만을 이용해서 구글 홈페이지 목업 만들기
     :width: 100%
 
 필요한 이미지는 구글 홈페이지에서 직접 다운받을 수 있습니다.
+
+과제를 하려면 세미나에서 다룬 내용 외에 직접 찾아보면서 공부해야할 것들도 좀 있을 것입니다. 위에 추가된 flexbox 보충자료와 읽을거리를 참고해주세요. (하단 바를 어떻게 구현해야할지 모르겠다면 CSS Layout - The position Property를 읽어보세요)
