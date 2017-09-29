@@ -274,4 +274,6 @@ greetHeesu와 greetDonghoon은 makeGreet에서 만들어진 함수들입니다. 
 
 읽을거리
 --------------
+* `w3schools JavaScript HTML DOM <https://www.w3schools.com/js/js_htmldom.asp>`_
 * `Learning Functional Programming with JavaScript <https://youtu.be/e-5obm1G_FY>`_
+* `Master the JavaScript Interview: What is Functional Programming? <https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0>`_
