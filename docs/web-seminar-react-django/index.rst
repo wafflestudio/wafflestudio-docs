@@ -6,7 +6,7 @@
 
    0-intro
    1-html-css
-   2-javascript-react-basic
+   2-javascript
    3-react
    4-redux-redux-saga
    5-drf
