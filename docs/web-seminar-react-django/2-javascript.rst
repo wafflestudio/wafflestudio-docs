@@ -115,6 +115,12 @@ Javascript의 기본 타입(primitive type)에는 다음과 같은 것들이 있
 조건문과 반복문은 다른 언어와 비슷하니 `조건문 - 생활코딩 <https://opentutorials.org/course/743/4724>`_\과 `반복문 - 생활코딩 <https://opentutorials.org/course/743/4728>`_\를 참고하시기 바랍니다.
 
 
+배열(Array)
+------------------
+
+`Javascript Array <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>`_ 참고
+
+
 객체(Object)
 ----------------
 
@@ -253,7 +259,6 @@ greetHeesu와 greetDonghoon은 makeGreet에서 만들어진 함수들입니다. 
 .. code-block:: javascript
 
   function makeGreeting(language) {
-
     return function(name) {
       if (language === 'en') {
         console.log('Hello ' + name);
@@ -270,6 +275,21 @@ greetHeesu와 greetDonghoon은 makeGreet에서 만들어진 함수들입니다. 
 
   greetEnglish('Heesu Suh');
   greetKorean('서희수');
+
+
+과제
+--------------------------------------
+
+.. image:: ../_static/javascript-hw-example.png
+    :width: 100%
+
+추석 때 다들 편하게 쉬시라고 이번 과제는 특별히 쉬운걸 준비했습니다.
+
+위의 사진처럼 직각삼각형 모양으로 별을 찍는건데, Add 버튼을 누르면 아래에 한 줄씩 추가하고, Remove 버튼을 누르면 아래에서부터 한 줄씩 삭제해주는 것입니다.
+
+`JavaScript HTML DOM Elements <https://www.w3schools.com/js/js_htmldom_elements.asp>`_\와 `JavaScript HTML DOM Elements (Nodes) <https://www.w3schools.com/js/js_htmldom_nodes.asp>`_\를 참고해주세요.
+
+혹시 마지막 줄을 어떻게 삭제해야할지 모르겠으면 `Node.lastChild <https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild>`_\를 참고하셔도 됩니다.
 
 
 읽을거리
