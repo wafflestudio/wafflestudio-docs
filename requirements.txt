@@ -2,3 +2,4 @@ sphinx==1.6.3
 sphinx-autobuild==0.7.1
 recommonmark==0.4.0
 sphinx-rtd-theme==0.2.4
+jsx-lexer==0.0.4
