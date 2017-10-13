@@ -203,3 +203,56 @@ src 폴더에 Comment.js라는 파일을 만들어서 다음 코드를 붙여넣
 map 함수에 대해서는 `Array.prototype.map() - MDN <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map>`_\을 참고하세요.
 
 
+React Tutorial : Tic Tac Toe
+--------------------------------
+
+기본적인 개념들을 살펴보았으니 이제 `React 공식 튜토리얼 <https://reactjs.org/tutorial/tutorial.html#getting-started>`_\을 따라가면서 더 알아보도록 합시다.
+
+기본 뼈대 코드는 `<https://www.dropbox.com/s/ywaw6xo5z8jkdwq/tic-tac-toe.zip?dl=0>`_ 에 올려놓았으니 참고하시기 바랍니다.
+
+세미나에서는 Storing a History 전까지만 다룰 예정이지만, 그 이후 내용도 혼자서 해보시면 좋을 것 같습니다.
+
+
+과제
+-----------------
+
+간단한 To-Do List 만들기
+
+기본 화면은 아래와 같이 생겼습니다.
+
+.. image:: ../_static/react-hw-example-1.png
+    :width: 100%
+
+아이템을 클릭하면 아래와 같이 완료되었다는 표시를 해줍니다.
+
+.. image:: ../_static/react-hw-example-2.png
+    :width: 100%
+
+Show: 에서 Active를 클릭하면 아직 완료되지 않은 아이템들만을 보여줍니다.
+
+.. image:: ../_static/react-hw-example-3.png
+    :width: 100%
+
+Show: 에서 Completed를 클릭하면 완료된 아이템들만을 보여줍니다.
+
+.. image:: ../_static/react-hw-example-4.png
+    :width: 100%
+
+인풋창에 텍스트를 입력하고 Add Todo 버튼을 누르면 새로운 아이템을 추가해줍니다.
+
+.. image:: ../_static/react-hw-example-5.png
+    :width: 100%
+
+Delete 버튼을 누르면 아이템을 삭제해줍니다.
+
+.. image:: ../_static/react-hw-example-6.png
+    :width: 100%
+
+
+읽을거리
+----------------
+
+* `State and Lifecycle <https://reactjs.org/docs/state-and-lifecycle.html>`_
+* `Conditional Rendering <https://reactjs.org/docs/conditional-rendering.html>`_
+* `Forms <https://reactjs.org/docs/forms.html>`_
+* `Thinking in React <https://reactjs.org/docs/thinking-in-react.html>`_
